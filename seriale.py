@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import time
 import serial
-          
+import getvalues.py
       
 	ser = serial.Serial(
               
@@ -14,6 +14,8 @@ import serial
         )
         counter=0
         while counter<200:
-        	ser.write('Write counter: %d \n'%(counter))
+		data=getValues()
+		if len(data) != 0:
+        		ser.write('%s'%data)
+		        counter += 1
                	time.sleep(1)
-               	counter += 1
