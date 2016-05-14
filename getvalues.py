@@ -154,7 +154,7 @@ def getfilteredvalues(kalx,kaly,kalz):
 	print "z acceleration filtered:%f"%measz
 	return repr(measx)+','+repr(measy)+','+repr(measz)
 
-def getValues()
+def getValues():
 	kalx=Kalman(read_word_2c(0x03b)/16384,0)
 	kaly=Kalman(read_word_2c(0x03d)/16384,1)
 	kalz=Kalman(read_word_2c(0x03f)/16384,2)
